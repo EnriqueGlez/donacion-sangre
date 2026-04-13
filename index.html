@@ -14,6 +14,7 @@
       --light-grey: #F8F9FA;
       --border: #EEEEEE;
       --accent-blue: #E3F2FD;
+      --weekend-gold: #FFF9C4;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,6 +63,17 @@
       margin-bottom: 30px;
     }
     .status-banner strong { font-size: 1.3rem; display: block; color: var(--primary); font-weight: 900; }
+    .weekend-tag { 
+      display: inline-block; 
+      background: var(--weekend-gold); 
+      color: #856404; 
+      padding: 2px 10px; 
+      border-radius: 10px; 
+      font-size: 0.8rem; 
+      font-weight: 800; 
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
 
     .section-title {
       font-size: 0.8rem;
@@ -148,7 +160,8 @@
 
   <div class="status-banner">
     <strong>REQUERIDOS: 7 DONANTES + 2 DE PLAQUETAS</strong>
-    <p>Es indispensable que la donación se realice en <b>La Raza</b> para que sea válida para el paciente.</p>
+    <p>Es indispensable que la donación se realice en <b>La Raza</b>.</p>
+    <span class="weekend-tag">📅 Preferencia: Sábado o Domingo</span>
   </div>
 
   <div class="section-title">1. Requisitos y Proceso</div>
@@ -166,13 +179,16 @@
       <div class="req-item"><span class="num">10.</span><div class="req-text">Sin alcohol 72 horas antes.</div></div>
       <div class="req-item"><span class="num">11.</span><div class="req-text"><strong>Transporte:</strong> No venir en motocicleta.</div></div>
       <div class="req-item"><span class="num">12.</span><div class="req-text"><strong>Piercings:</strong> Retirar piezas en boca o nariz 72h antes.</div></div>
-      <div class="req-item"><span class="num">13.</span><div class="req-text"><strong>Duración:</strong> El proceso completo de donación toma aproximadamente <strong>2 horas</strong>.</div></div>
+      <div class="req-item"><span class="num">13.</span><div class="req-text"><strong>Duración:</strong> El proceso toma aproximadamente <strong>2 horas</strong>.</div></div>
     </div>
   </div>
 
   <div class="section-title">2. Agenda tu Cita</div>
   <div class="card" style="padding: 20px;">
-    <p style="font-size: 0.9rem; text-align: center; margin-bottom: 15px; color: #666;">Al agendar, selecciona el <b>Banco de Sangre CMN La Raza</b>:</p>
+    <p style="font-size: 0.9rem; text-align: center; margin-bottom: 15px; color: #666;">
+        Al agendar, selecciona <b>La Raza</b>. <br>
+        <strong>De preferencia elige Sábado o Domingo.</strong>
+    </p>
     <a href="https://bancodesangre.imss.gob.mx/apopsbs-publico/login" target="_blank" class="btn btn-imss">AGENDAR CITA EN LÍNEA →</a>
   </div>
 
@@ -180,7 +196,7 @@
   <div class="transport-card">
     <div class="transport-icon">🚗</div>
     <div class="transport-text">
-      Podemos pasar a recogerte si estás cerca de la <b>zona de Toluca</b>. En caso contrario, también <b>podemos apoyarte con el tansporte</b> para que llegues sin problemas.
+      Podemos pasar por ti a la <b>zona de Toluca</b> (especialmente fines de semana). Si no, también <b>te apoyamos con el Uber</b> para que vayas y regreses con calma.
     </div>
   </div>
 
