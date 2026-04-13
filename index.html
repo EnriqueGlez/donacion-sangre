@@ -1,65 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donation Campaign</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Donación de Sangre</title>
+    <style>
+        :root {
+            --red: #D62828;
+            --red-dark: #9B1B1B;
+            --white: #FFFFFF;
+            --black: #000000;
+            --grey: #F5F5F5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--grey);
+        }
+        .hero {
+            background-color: var(--red);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+        .progress {
+            margin: 20px;
+            font-size: 24px;
+        }
+        .alert {
+            background-color: #FFC107;
+            padding: 10px;
+            text-align: center;
+        }
+        .patient-data, .hospital-info {
+            padding: 20px;
+            margin: 20px;
+            background-color: var(--white);
+            border-radius: 5px;
+        }
+        .requirements {
+            list-style-type: none;
+            padding: 0;
+        }
+        .requirement {
+            margin: 10px 0;
+        }
+        .contact {
+            padding: 20px;
+            background-color: var(--white);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--red-dark);
+            color: var(--white);
+        }
+        @media (max-width: 600px) {
+            .hero, .contact, .patient-data, .hospital-info {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <section class="hero">
-            <h1>Join Our Blood Donation Campaign</h1>
-            <p>Your donation can save lives!</p>
-            <a href="#requirements" class="btn">Get Involved</a>
-        </section>
-    </header>
 
-    <main>
-        <section class="donor-progress">
-            <h2>Donor Progress</h2>
-            <div class="progress-bar">
-                <div class="filled" style="width: 75%;"></div>
-            </div>
-            <p>75% of our goal achieved!</p>
-        </section>
+<div class="hero">
+    <h1>Tu sangre puede salvarle la vida a mi papá</h1>
+</div>
 
-        <section class="patient-data">
-            <h2>Patient Data</h2>
-            <div>
-                <p>Name: John Doe</p>
-                <p>Blood Type: O+</p>
-                <p>Condition: Recovering from surgery</p>
-            </div>
-        </section>
+<div class="progress">
+    Donadores: 3 de 10
+</div>
 
-        <section id="requirements">
-            <h2>Requirements to Donate</h2>
-            <ul>
-                <li>Age: 18-65 years</li>
-                <li>Minimum Weight: 50 kg</li>
-                <li>Good Health</li>
-                <li>No recent tattoos or piercings</li>
-            </ul>
-        </section>
+<div class="alert">
+    <strong>¡Urgente!</strong> Se necesitan donantes de plaquetas.
+</div>
 
-        <section>
-            <h2>Steps to Donate</h2>
-            <ol>
-                <li>Register online or at the donation center.</li>
-                <li>Fill out the medical questionnaire.</li>
-                <li>Meet with a healthcare professional.</li>
-                <li>Donate blood.</li>
-                <li>Enjoy refreshments!</li>
-            </ol>
-        </section>
-    </main>
+<div class="patient-data">
+    <h2>Datos del Paciente</h2>
+    <p>Enrique González Pérez</p>
+    <p>Cirugía Cardiotorácica</p>
+    <p>IMSS La Raza</p>
+</div>
 
-    <footer>
-        <h2>Contact Information</h2>
-        <p>If you have any questions, reach out to us:</p>
-        <p>Email: info@blooddonations.org</p>
-        <p>Phone: +123456789</p>
-    </footer>
+<div class="hospital-info">
+    <h2>Información del Hospital</h2>
+    <p>IMSS La Raza, ubicado en Ciudad de México.</p>
+</div>
+
+<h2>Requisitos para donar: </h2>
+<ul class="requirements">
+    <li class="requirement">1. ser mayor de 18 años 🧑</li>
+    <li class="requirement">2. pesar más de 50 kg ⚖️</li>
+    <li class="requirement">3. no tener enfermedades infecciosas ❌</li>
+    <li class="requirement">4. no estar bajo tratamiento médico 💊</li>
+    <li class="requirement">5. no haber donado sangre en los últimos 3 meses ⏱️</li>
+    <li class="requirement">6. estar bien hidratado 💧</li>
+    <li class="requirement">7. no consumir alcohol 24h antes 🍷</li>
+    <li class="requirement">8. no fumar 2h antes 🚬</li>
+    <li class="requirement">9. llevar identificación 📄</li>
+    <li class="requirement">10. haber comido algo antes 🍽️</li>
+    <li class="requirement">11. contar con la aprobación de un médico 🩺</li>
+    <li class="requirement">12. no tener tatuajes recientes 🖊️</li>
+    <li class="requirement">13. no tener piercing en el momento 💍</li>
+    <li class="requirement">14. ayudar a salvar vidas ❤️</li>
+</ul>
+
+<div class="donation-details">
+    <h2>Detalles de la Donación de Plaquetas</h2>
+    <p>La donación de plaquetas es vital para pacientes con cáncer y otras enfermedades.</p>
+</div>
+
+<div class="steps-to-donate">
+    <h2>Pasos para Donar:</h2>
+    <ol>
+        <li>Acude al centro de donación.</li>
+        <li>Realiza un examen médico.</li>
+        <li>Completa los formularios necesarios.</li>
+        <li>Realiza la donación.</li>
+        <li>Recibe material post-donación y consejos.</li>
+    </ol>
+</div>
+
+<div class="contact">
+    <h2>Contáctanos</h2>
+    <button onclick="location.href='https://wa.me/1234567890'">WhatsApp</button>
+    <button onclick="location.href='mailto:info@donacionsangre.com'">Email</button>
+</div>
+
+<footer>
+    <p>&copy; 2026 Donación de Sangre. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
