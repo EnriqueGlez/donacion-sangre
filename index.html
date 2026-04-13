@@ -21,53 +21,54 @@
       background-color: #FFFFFF;
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
+      line-height: 1.5;
       padding: 15px;
     }
 
-    /* Aumentamos el ancho máximo para que respire mejor en PC y Móvil */
     .container { 
-      max-width: 600px; 
+      max-width: 650px; 
       margin: 0 auto; 
     }
 
-    /* --- ENCABEZADO OPTIMIZADO --- */
-    .header { 
-      padding: 50px 0 30px; 
-      text-align: left; 
-    }
-    
+    .header { padding: 40px 0 20px; text-align: left; }
     .header h1 { 
-      /* font-size dinámico para que NO se corte en móviles */
-      font-size: clamp(2rem, 10vw, 3.5rem); 
+      font-size: clamp(2.2rem, 8vw, 3.8rem); 
       font-weight: 900; 
-      line-height: 1; 
+      line-height: 0.9; 
       letter-spacing: -2px; 
-      margin-bottom: 15px;
-      white-space: nowrap; /* Evita que el título se rompa en dos líneas */
+      margin-bottom: 10px;
+      white-space: nowrap;
     }
-    
     .header h1 span { color: var(--primary); }
-    .header p { font-size: 1.2rem; color: #555; font-weight: 500; }
+    .header p { font-size: 1.2rem; color: #555; font-weight: 600; }
 
-    /* --- TARJETA DE ESTADO --- */
+    /* TARJETA DE UBICACIÓN CRÍTICA */
+    .location-card {
+      background: #FFF0F0;
+      border: 2px solid var(--primary);
+      padding: 20px;
+      border-radius: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .location-card h2 { color: var(--primary); font-size: 1.1rem; font-weight: 900; text-transform: uppercase; margin-bottom: 5px; }
+    .location-card p { font-size: 1rem; font-weight: 700; color: var(--dark); }
+
     .status-banner {
       background: var(--light-grey);
       border-left: 6px solid var(--primary);
       padding: 20px;
       border-radius: 4px 20px 20px 4px;
-      margin-bottom: 35px;
-      box-shadow: 2px 4px 10px rgba(0,0,0,0.02);
+      margin-bottom: 30px;
     }
-    .status-banner strong { font-size: 1.3rem; display: block; color: var(--primary); font-weight: 800; }
+    .status-banner strong { font-size: 1.3rem; display: block; color: var(--primary); font-weight: 900; }
 
-    /* --- SECCIONES --- */
     .section-title {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #AAA;
       display: flex;
       align-items: center;
@@ -78,64 +79,43 @@
     .card {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 30px;
-      margin-bottom: 40px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+      border-radius: 24px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     }
 
-    /* --- REQUISITOS --- */
     .req-list { list-style: none; }
     .req-item {
       display: flex;
-      gap: 18px;
-      margin-bottom: 20px;
-      padding-bottom: 15px;
+      gap: 15px;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
       border-bottom: 1px solid #F9F9F9;
-      align-items: flex-start;
+      font-size: 0.92rem;
     }
     .req-item:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
-    .icon { font-size: 1.4rem; }
-    .req-text { font-size: 1rem; color: #333; }
+    .num { font-weight: 900; color: var(--primary); min-width: 25px; }
     .req-text strong { color: var(--dark); font-weight: 700; }
 
-    /* --- BOTONES --- */
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
-      padding: 22px;
-      border-radius: 20px;
+      gap: 12px;
+      padding: 20px;
+      border-radius: 18px;
       text-decoration: none;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
+    .btn-imss { background: var(--dark); color: white; }
+    .btn-wa { background: var(--whatsapp); color: white; margin-top: 10px; }
+    .btn svg { width: 24px; height: 24px; fill: currentColor; }
 
-    .btn-imss {
-      background: var(--dark);
-      color: white;
-    }
-
-    .btn-wa {
-      background: var(--whatsapp);
-      color: white;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
-    }
-
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-    .btn:active { transform: scale(0.98); }
-    .btn svg { width: 28px; height: 28px; fill: currentColor; }
-
-    footer {
-      text-align: center;
-      padding: 50px 0;
-      font-size: 0.85rem;
-      color: #BBB;
-      letter-spacing: 1px;
-    }
+    footer { text-align: center; padding: 40px 0; font-size: 0.8rem; color: #BBB; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -144,72 +124,51 @@
   
   <header class="header">
     <h1>Ayuda a <span>mi papá.</span></h1>
-    <p>Donación para <strong>Enrique González Pérez</strong><br>IMSS La Raza · Cirugía Cardiotorácica</p>
+    <p>Enrique González Pérez · Cirugía Cardiotorácica</p>
   </header>
 
-  <div class="status-banner">
-    <strong>URGENTE: Faltan 7 Donantes</strong>
-    <p>Y 2 donantes de Plaquetas.</p>
+  <div class="location-card">
+    <h2>Lugar de Donación:</h2>
+    <p>Banco Central de Sangre CMN "La Raza"</p>
+    <small style="display:block; margin-top:5px; color:#666;">Av. Jacarandas s/n esq. Seris, Col. La Raza</small>
   </div>
 
-  <div class="section-title">Requisitos Oficiales</div>
+  <div class="status-banner">
+    <strong>REQUERIDOS: 10 DONANTES + 2 DE PLAQUETAS</strong>
+    <p>Es indispensable que la donación se realice en <b>La Raza</b> para que sea válida para el paciente.</p>
+  </div>
+
+  <div class="section-title">1. Requisitos Oficiales (Hoja IMSS)</div>
   <div class="card">
     <div class="req-list">
-      <div class="req-item">
-        <span class="icon">🪪</span>
-        <div class="req-text"><strong>Identificación:</strong> INE o Pasaporte original vigente.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">⚖️</span>
-        <div class="req-text"><strong>Edad y Peso:</strong> 18-65 años y más de 50 kg.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">🍎</span>
-        <div class="req-text"><strong>Ayuno 4h:</strong> Fruta (no plátano/aguacate), té o café solo.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">🍳</span>
-        <div class="req-text"><strong>24h Sin Grasas:</strong> No huevo, lácteos ni derivados.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">💊</span>
-        <div class="req-text"><strong>Medicinas:</strong> Ninguna en los últimos 5 días.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">🎨</span>
-        <div class="req-text"><strong>Tatuajes:</strong> Más de 12 meses de antigüedad.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">💉</span>
-        <div class="req-text"><strong>Vacunas:</strong> Cansino/Sinovac esperar 14 días.</div>
-      </div>
-      <div class="req-item">
-        <span class="icon">🏍️</span>
-        <div class="req-text"><strong>Importante:</strong> No venir en moto. Venir con manga corta.</div>
-      </div>
+      <div class="req-item"><span class="num">1.</span><div class="req-text"><strong>Identificación oficial original:</strong> INE, pasaporte, cédula o cartilla de salud.</div></div>
+      <div class="req-item"><span class="num">2.</span><div class="req-text"><strong>Edad:</strong> De 18 a 65 años.</div></div>
+      <div class="req-item"><span class="num">3.</span><div class="req-text"><strong>Peso:</strong> Mayor de 50 kilos.</div></div>
+      <div class="req-item"><span class="num">4.</span><div class="req-text"><strong>Ayuno 4h:</strong> Evitar grasas 24h antes. Solo jugos, té, café o frutas (<strong>NO plátano, mamey, coco ni aguacate</strong>). Máximo 8h de ayuno.</div></div>
+      <div class="req-item"><span class="num">5.</span><div class="req-text"><strong>Salud:</strong> Sin gripe, diarrea o infección dental en los últimos 14 días.</div></div>
+      <div class="req-item"><span class="num">6.</span><div class="req-text"><strong>Medicamentos:</strong> Ninguno 5 días antes (excepto presión/diabetes).</div></div>
+      <div class="req-item"><span class="num">7.</span><div class="req-text"><strong>Tratamientos:</strong> Sin <strong>endodoncia</strong>, acupuntura, tatuajes o perforaciones en los últimos 12 meses.</div></div>
+      <div class="req-item"><span class="num">8.</span><div class="req-text">Sin cirugías en los últimos 6 meses.</div></div>
+      <div class="req-item"><span class="num">9.</span><div class="req-text"><strong>Vacunas:</strong> Cansino/Sinovac esperar 14 días. Otras marcas sin espera.</div></div>
+      <div class="req-item"><span class="num">10.</span><div class="req-text">Sin alcohol 72 horas antes.</div></div>
+      <div class="req-item"><span class="num">11.</span><div class="req-text"><strong>Transporte:</strong> No venir en motocicleta.</div></div>
+      <div class="req-item"><span class="num">12.</span><div class="req-text"><strong>Piercings:</strong> Retirar piezas en boca o nariz 72h antes.</div></div>
     </div>
   </div>
 
-  <div class="section-title">Paso 2: Agenda tu cita</div>
+  <div class="section-title">2. Agenda tu Cita</div>
   <div class="card" style="padding: 20px;">
-    <p style="font-size: 0.95rem; color: #666; margin-bottom: 20px; text-align: center;">
-      Registra tu cita oficial en el portal del IMSS:
-    </p>
-    <a href="https://bancodesangre.imss.gob.mx/apopsbs-publico/login" target="_blank" class="btn btn-imss">
-      AGENDAR EN EL IMSS →
-    </a>
+    <p style="font-size: 0.9rem; text-align: center; margin-bottom: 15px; color: #666;">Al agendar, selecciona el <b>Banco de Sangre CMN La Raza</b>:</p>
+    <a href="https://bancodesangre.imss.gob.mx/apopsbs-publico/login" target="_blank" class="btn btn-imss">AGENDAR CITA EN LÍNEA →</a>
   </div>
 
-  <div class="section-title">¿Dudas o confirmación?</div>
+  <div class="section-title">¿Dudas sobre la ubicación?</div>
   <a href="https://wa.me/525580561653" class="btn btn-wa">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    WHATSAPP DIRECTO
+    PREGUNTAR POR WHATSAPP
   </a>
 
-  <footer>
-    "Donar sangre es un regalo de vida"<br>
-    Familia González Pérez · 2026
-  </footer>
+  <footer>"DONAR SANGRE ES UN REGALO DE VIDA"</footer>
 
 </div>
 
