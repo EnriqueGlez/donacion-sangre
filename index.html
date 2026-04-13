@@ -4,44 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Donation Campaign</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hero {
+            padding: 20px;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px;
+            }
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="hero">
-            <h1>Join Our Blood Donation Campaign!</h1>
-            <p>Your donation can save lives. Be a hero!</p>
-            <a href="#steps" class="btn">Learn More</a>
-        </div>
+        <h1>Join Our Blood Donation Campaign!</h1>
     </header>
-    <section id="patient-data">
-        <h2>Patient Data</h2>
-        <p>Every donation is vital for patients in need of blood transfusions. We collect data to ensure safe and efficient matches.</p>
-    </section>
-    <section id="requirements">
-        <h2>Requirements</h2>
-        <ul>
-            <li>Must be at least 18 years old.</li>
-            <li>Weigh at least 110 pounds (50 kg).</li>
-            <li>Be in good health.</li>
-            <li>No recent tattoos or piercings.</li>
-        </ul>
-    </section>
-    <section id="steps">
-        <h2>Steps to Donate</h2>
-        <ol>
-            <li>Find a donation center.</li>
-            <li>Fill out a donor registration form.</li>
-            <li>Undergo a brief health screening.</li>
-            <li>Make your donation.</li>
-            <li>Enjoy refreshments afterward!</li>
-        </ol>
-    </section>
+    <div class="container">
+        <section class="hero">
+            <h2>Be a Hero, Save Lives!</h2>
+            <p>Your donation can make a difference in many lives. Join us in this noble cause.</p>
+        </section>
+        <section>
+            <h2>Patient Data</h2>
+            <p>Here you can find data of the patients who are in need of donations.</p>
+            <ul>
+                <li>Patient 1: Name, Blood Type, Condition</li>
+                <li>Patient 2: Name, Blood Type, Condition</li>
+                <li>Patient 3: Name, Blood Type, Condition</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Requirements</h2>
+            <p>To donate blood, please meet the following requirements:</p>
+            <ul>
+                <li>Age: 18-65 years</li>
+                <li>Weight: At least 50 kg</li>
+                <li>No recent infections</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Steps to Donate</h2>
+            <p>Follow these steps to donate:</p>
+            <ol>
+                <li>Find a donation center.</li>
+                <li>Bring your ID.</li>
+                <li>Complete the donation form.</li>
+                <li>Undergo a health screening.</li>
+                <li>Donate blood!</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Contact Information</h2>
+            <p>For more information, please contact us:</p>
+            <p>Email: info@blooddonation.org</p>
+            <p>Phone: +123 456 7890</p>
+        </section>
+    </div>
     <footer>
-        <h2>Contact Information</h2>
-        <p>If you have questions about the donation process, please reach out to us:</p>
-        <p>Email: support@blooddonate.org</p>
-        <p>Phone: (555) 123-4567</p>
+        <p>&copy; 2026 Blood Donation Campaign</p>
     </footer>
 </body>
 </html>
